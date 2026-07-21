@@ -1,0 +1,44 @@
+{
+  "name": "AI Webhook Lead Parser",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "submit-lead",
+        "options": {}
+      },
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Code from parser.py executes here to clean incoming payload\nreturn process_webhook_payload(items[0].json)"
+      },
+      "name": "Python Sanitizer",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "prompt": "={{ $json.ai_prompt }}"
+      },
+      "name": "OpenAI LLM Node",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [[{ "node": "Python Sanitizer", "type": "main", "index": 0 }]]
+    },
+    "Python Sanitizer": {
+      "main": [[{ "node": "OpenAI LLM Node", "type": "main", "index": 0 }]]
+    }
+  }
+}
