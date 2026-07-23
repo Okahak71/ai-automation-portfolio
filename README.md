@@ -1,26 +1,20 @@
-# Python Automation & AI Solutions
+# 🚀 AI & Automation Portfolio
 
-Welcome! I build custom Python scripts, Discord bots, and automated AI workflows (n8n) to eliminate manual tasks and streamline operations.
-
----
-
-## 🛠️ Featured Showcase Projects
-
-### 1. [Discord Crypto Price Bot](./discord-crypto-bot)
-* **Tech:** Python, `discord.py`, CoinGecko API
-* **Problem Solved:** Allows Discord community members to query real-time crypto prices and token statistics using slash commands without leaving the app.
-
-### 2. [B2B Data Scraper & Formatter](./b2b-lead-scraper)
-* **Tech:** Python, `requests`, `BeautifulSoup`, `pandas`
-* **Problem Solved:** Automatically extracts business leads from web directories, cleans the data, and formats it into ready-to-use CSV/Excel spreadsheets.
-
-### 3. [n8n AI Content Processing Workflow](./n8n-ai-workflow)
-* **Tech:** Python, n8n, OpenAI API, Webhooks
-* **Problem Solved:** Connects incoming data webhooks to AI models for automatic text parsing, summarization, and routing to external databases.
+Welcome! This repository showcases my custom automation workflows, Discord bots, and scraping solutions.
 
 ---
 
-## 📬 Contact & Hiring
-* **Discord:** `okahak71`
-* **Minimum Project Rate:** $50
-* **Accepted Payments:** Crypto (USDT/USDC on Polygon/Solana), Payoneer
+## ⭐ Featured Client Work
+
+### 🏆 [Tournament Drop-Off Prevention Bot](./tournament-bot)
+* **Client Result:** 100% player check-in compliance, eliminated manual organizer pings, saved 8+ hours per event.
+* **Tech Stack:** Python (`discord.py`), AsyncIO, `python-dotenv`
+* **Highlights:** Includes full case study breakdown and client testimonial.
+
+---
+
+## 🛠️ Proof-of-Concept & Display Projects
+
+* 🔍 **[B2B Lead Scraper](./b2b-lead-scraper):** Automated lead generation script for extracting company contact info.
+* 📈 **[Discord Crypto Bot](./discord-crypto-bot):** Live price tracking and automated market alerts for Discord channels.
+* ⚙️ **[n8n AI Workflow](./n8n-ai-workflow):** Automated data parsing workflow built with n8n and Python.
