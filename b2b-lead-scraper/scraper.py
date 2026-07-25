@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 def scrape_leads():
-    # User-Agent header makes your request mimic a standard browser request
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
@@ -22,7 +21,6 @@ def scrape_leads():
         soup = BeautifulSoup(response.text, "html.parser")
         extracted_data = []
 
-        # Find all HTML container blocks
         items = soup.find_all("div", class_="quote")
         print(f"🔍 Found {len(items)} entries. Extracting data...")
 
@@ -37,8 +35,6 @@ def scrape_leads():
                 "Categories": ", ".join(tags),
                 "Scraped At": time.strftime("%Y-%m-%d %H:%M:%S")
             })
-            
-            # Small delay between parsing items to mimic human activity
             time.sleep(0.2)
 
         # Export dataset using Pandas
